@@ -1,6 +1,37 @@
 Parses CSV files
 
-Run with lowerY, upperY, leftX, rightX, "file.csv" as parameters
+Terminal instructions***
+    
+    Download executableParser.jar
+    Place file to be parsed in same directory as exectuableParser.jar
+    From that directory, run command: 
 
-After running, program will return speed it took to complete the program and 
-a new file will be created named "query_results.txt" with the points that are within the bounding box. 
+         java -jar acmeQueryBox.jar top bottom left right "file_to_be_read.csv"
+         **Note
+             top, bottom, left, right, "filetoberead" are placeholders
+             Add numerical values for box boundaries, add file as 5th arg
+    
+    Example working command: 
+    
+         java -jar acmeQueryBox.jar 120 85 3 30 "sample_data.csv"
+
+    When passed valid arguments, the program will provide 2 outputs
+        1. sysout of time of execution (i.e. this program took 300ms)
+        2. a new file in current directory of matching data points
+            File name will be "query_results.txt"
+
+Reusable Library Instructions:
+
+    Download parserLibrary.jar file
+    Add library to java project (as external JAR)
+    Add "import parser.mikesParser"
+    Create parser
+
+        mikesParser parserName = new mikesParser (left right top bottom "readFile.csv" "writeFile.txt"
+        ***change arguments as needed
+    Run parser
+        
+        parserName.readAndWrite()
+    Output
+        A new file with name depending on 6th argument with all points within given boundaries
+
