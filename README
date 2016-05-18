@@ -1,0 +1,6 @@
+Parses CSV files
+
+Run with lowerY, upperY, leftX, rightX, "file.csv" as parameters
+
+After running, program will return speed it took to complete the program and 
+a new file will be created named "query_results.txt" with the points that are within the bounding box. 
